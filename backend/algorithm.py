@@ -477,9 +477,7 @@ class ImageEnhancer:
             debug_path = os.path.join(self.result_dir, f'debug_{image_file}')
             cv2.imwrite(debug_path, debug_image)
 
-        # =========================================================================
-        # 核心修改：除了你原本的表格格式，我还额外生成了一份可以直接画图的“宽表格”
-        # =========================================================================
+      
         df = pd.DataFrame(data)
         if not df.empty:
             # 1. 保存你原来的格式
