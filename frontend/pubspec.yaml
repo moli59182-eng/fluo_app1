@@ -1,0 +1,40 @@
+name: frontend
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # 兼容性更广的写法
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # --- 核心依赖：连接后端与图像处理 ---
+  # 用于网络请求，连接你电脑上的 FastAPI (127.0.0.1:8000)
+  dio: ^5.4.1
+  http_parser: ^4.0.0
+  # 用于调用三星手机相册多选图片和相机拍照
+  image_picker: ^1.0.7
+  # 更好的图片选择器，直接进入相册
+  wechat_assets_picker: ^10.1.1
+  # 用于在结果页面绘制荧光强度的专业图表
+  fl_chart: ^0.66.0
+  # 用于本地存储历史记录
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # 以后如果你要在 App 里放图标或图片，就把下面两行的 # 删掉
+  # assets:
+  #   - assets/images/
